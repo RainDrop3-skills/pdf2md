@@ -1,0 +1,9 @@
+{
+  "skill_name": "pdf2md",
+  "evals": [
+    {"id": 0, "prompt": "강의계획서 pdf 페이지별로 정리해줘", "expected_output": "00-...-페이지별-설명.md, 7개 페이지 섹션, 에타 표시 없음, 영어 부분 번역", "files": ["inputs/00-SE-Syllabus-2026.pdf"],
+     "assertions": ["출력 파일명 형식", "p.1~p.7 섹션 전부", "에타 표시 없음", "번역 표기", "읽는 법/장 구성"]},
+    {"id": 1, "prompt": "1장 Introduction 강의자료 페이지별 설명 md로 만들어줘 --everytime", "expected_output": "01-...-페이지별-설명.md, 37개 섹션, 기존 매핑 번호(Q6,Q17,Q19,Q20) 기준 📌 표시, 끝에 에타 기출 연결 표", "files": ["inputs/01-Introduction-2026.pdf", "inputs/소웨공-에타-*"],
+     "assertions": ["출력 파일명 형식", "p.1~p.37 섹션 전부", "📌 표시 3개 이상", "p.13 Q17/Q20", "p.20 Q19", "p.4/p.23 Q6", "에타 기출 연결 섹션", "번역 10회 이상", "(#번호) 표기", "읽는 법/장 구성"]}
+  ]
+}
